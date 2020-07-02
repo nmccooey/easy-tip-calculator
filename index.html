@@ -8,20 +8,30 @@
         <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
         <link rel="manifest" href="/images/site.webmanifest">
+        <link rel="stylesheet" href="/stylesheets/styles.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Acme&display=swap">
     </head>
     <body>
-        <header>
-            <h1>Easy Tip Calculator</h1>
-        </header>
-        <main>
-            <form>
-                <label for="bill">Enter Bill:</label><br>
-                <input type="number" id="bill"><br>
-                <button type="button" id="calculate-tip">Calculate Tip</button>
-            </form>
-            <div id="tip">Tip:</div>
-            <div id="total-bill">Total Bill:</div>
-        </main>
+        <div class="app-container">
+            <header>
+                <h1>Easy Tip Calculator</h1>
+            </header>
+            <main>
+                <form class="bill-form">
+                    <label for="bill">Enter Bill:</label>
+                    <span class="currency">$&nbsp;<input id="bill" type="number" onkeyup="if(this.value<0){this.value= this.value * -1}"></span>
+                </form>
+                <div class="slide-container">
+                    <p>Select Tip Percentage:</p>
+                    <input id="tip-slider" type="range" min="1" max="100" value="20">
+                    <audio id="click-sound" style="display: none;"></audio>
+                </div>
+                <p id="tip-percentage">Tip Percentage: 20%</p>
+                <div id="tip">Tip: $0.00</div>
+                <div id="total-bill">Total Bill: $0.00</div>
+                <button id="calculate-tip" type="button">Calculate Tip</button>
+            </main>
+        </div>
     </body>
     <script src="/scripts/tip.js"></script>
 </html>

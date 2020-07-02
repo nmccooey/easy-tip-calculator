@@ -1,0 +1,109 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    background-color: #a8e2d4;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Acme', sans-serif;
+}
+
+.app-container {
+    border: solid black 3px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    border-radius: 20px;
+    background-color: #f3f3f3;
+}
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+}
+
+main > * {
+    margin: 0px 0px 20px 0px;
+}
+
+.slide-container {
+    text-align: center;
+}
+
+.slide-container p {
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+#tip-slider {
+    width: 100%;
+}
+
+.bill-form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bill-form label {
+    margin-bottom: 20px;
+}
+
+.bill-form span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+}
+
+.bill-form span input {
+    font-size: 20px;
+    border: solid black 2px;
+    border-radius: 10px;
+    width: 50%;
+}
+
+#calculate-tip {
+    font-family: 'Acme', sans-serif;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    outline: none;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+}
+
+#calculate-tip:hover {background-color: #3e8e41}
+
+#calculate-tip:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+header {
+    margin: 20px 0px 20px 0px;
+}
+
+header h1 {
+    margin: 0px;
+    text-transform: uppercase;
+}
