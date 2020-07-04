@@ -35,8 +35,8 @@ calcTipButton.addEventListener("click", function() {
             clickSound.src = "/sounds/click.mp3";
             clickSound.play();
         
-            tipDiv.innerHTML = `Tip: ${addCommas(tip)}`;
-            totalBillDiv.innerHTML = `Total Bill: ${addCommas(total)}`;
+            tipDiv.innerHTML = `Tip: <span class="red">${addCommas(tip)}</span>`;
+            totalBillDiv.innerHTML = `Total Bill: <span class="red">${addCommas(total)}</span>`;
             
         } else {
             return;
@@ -46,8 +46,8 @@ calcTipButton.addEventListener("click", function() {
         clickSound.src = "/sounds/click.mp3";
         clickSound.play();
     
-        tipDiv.innerHTML = `Tip: ${addCommas(tip)}`;
-        totalBillDiv.innerHTML = `Total Bill: ${addCommas(total)}`;
+        tipDiv.innerHTML = `Tip: <span class="red">${addCommas(tip)}</span>`;
+        totalBillDiv.innerHTML = `Total Bill: <span class="red">${addCommas(total)}</span>`;
     }
 });
 
