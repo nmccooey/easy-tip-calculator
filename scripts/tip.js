@@ -28,12 +28,27 @@ calcTipButton.addEventListener("click", function() {
     tip = "$" + tip;
     total = "$" + Number(total).toFixed(2);
 
-    clickSound.src = "/sounds/click.mp3";
-    clickSound.play();
+    // Check if tip percentage is below 15 percent. Seek confirmaton.
+    if (tipPercent < 15) {
 
-    tipDiv.innerHTML = `Tip: ${addCommas(tip)}`;
-    totalBillDiv.innerHTML = `Total Bill: ${addCommas(total)}`;
+        if (confirm("Are you sure you want to tip less than 15%?")) {
+            clickSound.src = "/sounds/click.mp3";
+            clickSound.play();
+        
+            tipDiv.innerHTML = `Tip: ${addCommas(tip)}`;
+            totalBillDiv.innerHTML = `Total Bill: ${addCommas(total)}`;
+            
+        } else {
+            return;
+        }
 
+    } else {
+        clickSound.src = "/sounds/click.mp3";
+        clickSound.play();
+    
+        tipDiv.innerHTML = `Tip: ${addCommas(tip)}`;
+        totalBillDiv.innerHTML = `Total Bill: ${addCommas(total)}`;
+    }
 });
 
 function calculateTip(billAmount) {
