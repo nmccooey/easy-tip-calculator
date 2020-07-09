@@ -32,7 +32,7 @@ calcTipButton.addEventListener("click", function() {
     if (tipPercent < 15) {
 
         if (confirm("Are you sure you want to tip less than 15%?")) {
-            clickSound.src = "/sounds/click.mp3";
+            clickSound.src = "sounds/click.mp3";
             clickSound.play();
         
             tipDiv.innerHTML = `Tip: <span class="red">${addCommas(tip)}</span>`;
