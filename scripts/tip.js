@@ -43,7 +43,7 @@ calcTipButton.addEventListener("click", function() {
         }
 
     } else {
-        clickSound.src = "/sounds/click.mp3";
+        clickSound.src = "sounds/click.mp3";
         clickSound.play();
     
         tipDiv.innerHTML = `Tip: <span class="red">${addCommas(tip)}</span>`;
